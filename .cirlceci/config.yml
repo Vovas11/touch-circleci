@@ -34,9 +34,12 @@ jobs:
       - run: echo "Test succeded"
 workflows:
   version: 2
-  one_and_two:
+  one_and_two_and_test:
     jobs:
       - one
       - two:
           requires:
             - one
+      - test:
+          requires:
+            - two
