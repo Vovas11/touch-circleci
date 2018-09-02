@@ -28,7 +28,7 @@ jobs:
             echo "Nope!"; exit 1
   test:
     override:
-      - echo "test succeded"
+      - echo "test succeded?"
     #docker:
     #  - image: circleci/ruby:2.4.1
     #steps:
