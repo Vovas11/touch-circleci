@@ -46,7 +46,7 @@ workflows:
   
   my_workflow:
     jobs:
-      - one
+      - one:
           filters:
             branches:
               only: master
