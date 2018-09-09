@@ -30,7 +30,16 @@ jobs:
           else
             echo "Nope!"; exit 1
           fi
-
+  three:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run:
+          name: Check git version
+          command: |
+            echo "Git version:"
+            echo "Yes, this is an unique id: $(git describe --tags --always)"
 
 workflows:
   version: 2
@@ -41,3 +50,4 @@ workflows:
       - two:
           requires:
             - one
+      - three
