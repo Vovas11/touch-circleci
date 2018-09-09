@@ -1,2 +1,2 @@
 # touch-circleci
-testing circleci using workflows
+testing circleci using workflows and filters for tags
