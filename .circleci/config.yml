@@ -55,4 +55,8 @@ workflows:
       - two:
           requires:
             - one
-      - three
+      - three:
+          branches:
+              ignore: /.*/
+            tags:
+              only: /^\d+\.\d+\.\d+$/
