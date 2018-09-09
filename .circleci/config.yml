@@ -47,6 +47,11 @@ workflows:
   my_workflow:
     jobs:
       - one
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
       - two:
           requires:
             - one
