@@ -58,6 +58,6 @@ workflows:
       - three:
           filters:
             branches:
-                ignore: /.*/
-              tags:
-                only: /^\d+\.\d+\.\d+$/
+              ignore: /.*/
+            tags:
+              only: /^\d+\.\d+\.\d+$/
