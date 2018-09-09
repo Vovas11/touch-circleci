@@ -51,7 +51,7 @@ workflows:
             branches:
               only: master
             tags:
-              only: /.+/
+              only: /^\d+\.\d+\.\d+$/
       - two:
           requires:
             - one
