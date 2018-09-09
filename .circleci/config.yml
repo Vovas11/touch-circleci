@@ -7,9 +7,10 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello to circleCI"
-      - run: echo "Current dir:"
-      - run: pwd
-      - run: mkdir -p my_workspaces
+      - run: |
+          echo "Current dir:"
+          pwd
+      - run: mkdir -p my_workspace
       - run: echo "Trying out workspaces" > my_workspace/echo-output
       - persist_to_workspace:
           root: my_workspace
